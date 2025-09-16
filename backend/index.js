@@ -20,10 +20,15 @@ const logger = require('./Middlewares/logger.Middlewares.js');
 const app = express();
 const PORT = process.env.PORT || 5000; 
 
-app.use(cors({
-    origin: ["https://roadtripy.vercel.app", "http://localhost:3000"],
-    credentials: true
-}));
+app.use(
+  cors({
+    origin: [
+      "https://road-trip-planner-alpha.vercel.app",
+      "http://localhost:3000",
+    ],
+    credentials: true,
+  })
+);
 
 // Middleware to parse JSON with size limit
 app.use(express.json({ limit: '10mb' }));
