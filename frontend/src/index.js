@@ -78,14 +78,6 @@ root.render(
   </React.StrictMode>
 );
 
-
-if (process.env.NODE_ENV === 'production') {
-
-  import('./reportWebVitals').then(({ default: reportWebVitals }) => {
-    reportWebVitals(console.log);
-  }).catch(console.error);
-}
-
 // Service Worker registration 
 if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
   window.addEventListener('load', () => {
