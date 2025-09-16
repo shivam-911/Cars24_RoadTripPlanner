@@ -1,5 +1,6 @@
-export const BASE_URL = process.env.NODE_ENV === 'production' 
-    ? "https://roadtrip-planner.onrender.com" 
+export const BASE_URL =
+  process.env.NODE_ENV === "production"
+    ? "https://roadtrip-planner-pmu5.onrender.com/"
     : "http://localhost:5000";
 
 // API endpoints

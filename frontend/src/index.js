@@ -23,7 +23,7 @@ class ErrorBoundary extends React.Component {
       errorInfo: errorInfo
     });
 
-    // Log error to console in development
+ 
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
     }
@@ -78,15 +78,15 @@ root.render(
   </React.StrictMode>
 );
 
-// Performance monitoring (optional)
+
 if (process.env.NODE_ENV === 'production') {
-  // You can add performance monitoring here
+
   import('./reportWebVitals').then(({ default: reportWebVitals }) => {
     reportWebVitals(console.log);
   }).catch(console.error);
 }
 
-// Service Worker registration (optional for PWA)
+// Service Worker registration 
 if ('serviceWorker' in navigator && process.env.NODE_ENV === 'production') {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/sw.js')
